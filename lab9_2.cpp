@@ -1,7 +1,3 @@
-//cout << "-------------------- SOTUS ---------------------";
-//cout << textline;
-//cout << "-------------------- SOTUS ---------------------";
-//Don't forget to change cout to output filestream
 #include<iostream>
 #include<string>
 #include<cstdlib>
@@ -20,8 +16,16 @@ int main()
         cheerbook_copy << text << endl;
     }
     cheerbook_copy << "“-------------------- SOTUS ---------------------”"<<endl;
-    cheerbook.close();
     cheerbook_copy.close();
+    cheerbook.close();
+    ifstream cheerbook_copy2; 
+    cheerbook_copy2.open ("F:\\cpp\\261102\\lab9-2562-2-Dexshine\\cheerbook_copy.txt");
+    
+    while(getline(cheerbook_copy2,text)){
+        cout << text << endl;
+    }
+    
+    cheerbook_copy2.close();
 
     return 0;
 }
